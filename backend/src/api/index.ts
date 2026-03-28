@@ -17,6 +17,7 @@ import webhooksRouter from "./webhooks.routes.js";
 import cachedStatsRouter from "./cached-stats.routes.js";
 
 import orgMemberRouter from "./org-member.routes.js";
+import bridgeLiquidityRouter from "./bridge-liquidity.routes.js";
 
 const router = Router();
 
@@ -33,6 +34,7 @@ router.use("/invoice-links", invoiceLinkRouter);
 router.use("/webhooks", webhooksRouter);
 router.use("/stats", cachedStatsRouter);
 router.use("/", orgMemberRouter);
+router.use("/bridge-liquidity", bridgeLiquidityRouter);
 
 const auditLogService = new AuditLogService();
 
